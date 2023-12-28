@@ -10,6 +10,7 @@ import Contect from "../Pages/Contect";
 import ProductsDetails from "../Pages/ProductsDetails";
 import Cart from "../Pages/Cart";
 import Login from "../Pages/Auth/Login/Login";
+import Registration from "../Pages/Auth/Registration/Registration";
 
 export default function router() {
   return (
@@ -25,6 +26,8 @@ export default function router() {
           <Route exact path="/details" element={<ProductsDetails />} />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/registration" element={<Registration />} />
+
         </Routes>
         <Footer />
       </BrowserRouter>

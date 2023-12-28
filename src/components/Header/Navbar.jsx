@@ -4,13 +4,10 @@ import { Link, NavLink } from "react-router-dom";
 import Login from "../../Pages/Auth/Login/Login";
 
 export default function Navbar() {
-  const [modal, setModal] = useState(false);
-
-  const toggle = () => setModal(!modal);
 
   return (
     <>
-      <nav className="fh5co-nav p-10 h-[3px]">
+      <nav className="fh5co-nav p-10 h-[30px]">
         <div className="container">
           <div className="row">
             <div className="col-md-3 col-xs-2">
@@ -47,7 +44,7 @@ export default function Navbar() {
                       <i class="fa-solid fa-magnifying-glass"></i>
                     </Link>
                     <li className="">
-                      <Link onClick={toggle} to="/login">
+                      <Link  to="/login">
                         Login
                       </Link>
                     </li>
