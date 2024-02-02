@@ -1,12 +1,12 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BE_URL } from "../../../config";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addProduct } from "../../../Redux/features/productSlice";
 import { toast } from "react-toastify";
 
-export default function Form() {
+export default function Form(props) {
   const intialFormData = {
     thumbnail: "",
     title: "",
@@ -45,13 +45,14 @@ export default function Form() {
         toast.error(err.message);
       });
 
-    setFormData(intialFormData);
-    navigate("/products");
-    console.log("Form JSX", { ...formData, setFormData });
-  };
-  console.log("🚀 ~ formData._id:", formData?._id);
+      setFormData(intialFormData);
+      navigate("/products");
+      console.log("Form JSX", { ...formData, setFormData });
+    };
 
-  const updateHandler = () => {
+    // console.log("🚀 ~ updateHandler ~ formData?._id:", formData?._id)
+
+    const updateHandler = () => {
     axios({
       method: "put",
       url: `${BE_URL}/product/update/${formData?._id}`,

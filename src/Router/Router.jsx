@@ -16,6 +16,7 @@ import { store } from "../Redux/app/store";
 import Profile from "../Pages/Profile/Profile";
 import Products from "../Pages/Admin/Products/Products";
 import Form from "../Pages/Admin/AddProducts/Form";
+// import UpdateForm from "../Pages/Admin/Update Form/UpdateForm";
 
 export default function router() {
   return (
@@ -36,6 +37,7 @@ export default function router() {
             <Route exact path="/profile" element={<Profile />} />
             <Route exact path="/products" element={<Products />} />
             <Route exact path="/addProducts" element={<Form />} />
+            {/* <Route exact path="/updateForm" element={<UpdateForm />} /> */}
           </Routes>
           <Footer />
         </BrowserRouter>

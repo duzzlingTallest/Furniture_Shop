@@ -55,7 +55,7 @@ navigate("/addProducts")
 
           {/* <!-- Add Product Form --> */}
           <div className="mb-4">
-            <form action="#" method="post" className="flex">
+            <form action="#" method="post" className="flex" >
               <input
                 type="text"
                 name="productName"
@@ -100,7 +100,7 @@ navigate("/addProducts")
             <tbody>
               {productData?.map?.((ele, i) => {
                 return (
-                  <tr>
+                  <tr key={ele?._id}>
                     <td className="py-2 px-4 border-b text-center">{i + 1}</td>
                     <td className="py-2 px-4 border-b text-center">
                       <img src={ele?.thumbnail} alt="" />
